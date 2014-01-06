@@ -77,4 +77,8 @@ Pinteresting::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  #required for Heroku
+  #set to the actual domain name in production
+  config.action_mailer.default_url_options = { :host => 'http://laet-pinteresting.herokuapp.com/' }
 end
